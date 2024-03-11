@@ -1,0 +1,361 @@
+/* style.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+}
+
+/* scroll */
+::-webkit-scrollbar {
+    width: 0.1px;
+}
+
+/* header part */
+header {
+    background: url('/img/banner.jpg') center/80% auto repeat-x; /* Center the image, cover 80% width, and repeat horizontally */
+    color: #fff;
+    text-align: center;
+    height: 110px;
+    padding: 10px;
+}
+
+.company-info {
+    text-align: center;
+    color: #fff;
+    font-size: 12px; /* Reduce font size */
+}
+
+.company-info p {
+    margin: 1px 0; /* Reduce the gap between paragraphs */
+}
+
+/* navebar */
+
+.navbar {
+    /* background-color: #4CAF50; */
+    background-color: #064600;
+    
+    overflow: hidden;
+    height: 50px;
+    
+}
+
+.navbar a {
+    
+    font-size: 19px;
+    color: white;
+    text-decoration: none;
+    padding: 0px 20px;
+    
+}
+
+.navbar a:hover{
+    cursor: pointer;
+    color: rgb(218, 218, 218);
+}
+.navbar a.logout {
+    
+    margin-left: auto; 
+}
+
+
+/* main image */
+
+.main-content {
+    position: relative; /* Set position relative to contain absolutely positioned elements */
+    z-index: 1; /* Ensure content stays above background */
+    overflow: hidden; /* Hide any overflow content from overflowing image */
+}
+
+.main-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 95%;
+    background-image: url('/bg-imgs/sugar-cane.jpg');
+    background-size: 36% 100%; /* Cover height and repeat x */
+    border-radius: 43px;
+    background-repeat: repeat-x; /* Repeat image horizontally */
+    z-index: -1; /* Place behind content */
+     /* Adjust opacity of image */
+}
+
+.main-content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Place behind content */
+}
+
+
+
+
+
+.main-content::after {
+    content: "";
+    position: absolute;
+    bottom: -50%; /* Adjust as needed */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(124, 252, 0, 0.3); Green shade */
+    z-index: -1; /* Place behind content */
+}
+
+
+
+/* main part */
+main {
+    background-color: #7dca8f;
+    opacity: 0.8;
+    background: linear-gradient(135deg, #a4eda255 25%, transparent 25%) -11px 0/ 22px 22px, linear-gradient(225deg, #a4eda2 25%, transparent 25%) -11px 0/ 22px 22px, linear-gradient(315deg, #a4eda255 25%, transparent 25%) 0px 0/ 22px 22px, linear-gradient(45deg, #a4eda2 25%, #7dca8f 25%) 0px 0/ 22px 22px;
+    
+    background-size: 600% 100%; 
+    animation: colorfulBackground 40s linear infinite; 
+ 
+
+    
+
+
+    color: #fff;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    
+}
+
+.form-container, .expense-tracker {
+    width: 45%;
+    background-color: rgba(255, 255, 255, 0.992);
+    font-size: 17px;
+    color: #000;
+    max-width: 600px;
+    margin: 0 auto 17px auto; /* Center the form and expense tracker and add margin at the bottom */
+    padding: 15px; /* Add padding for better spacing */
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.main-content{
+    margin-top: 10px;
+}
+.logo-container {
+    width: 300px; /* Set width for logo container */
+     /* Match the height of the form container */
+    display: flex;
+    align-items: center; /* Center the logo vertically */
+    justify-content: center; /* Center the logo horizontally */
+     /* Add some space below the logo */
+}
+
+.logo {
+    width: 70%; /* Make the logo fill its container */
+    border-radius: 50%; /* Make the logo circular */
+    display: block;
+}
+
+
+table {
+    width: 93%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-bottom: 18px;
+    border-radius: 15px; /* Rounded corners */
+}
+
+
+
+
+table, th, td {
+    border: 0.1px solid #000;
+    
+}
+
+th, td {
+    padding: 17px;
+    font-size: 19px;
+    
+    
+}
+td{
+    /* background-color: rgba(255, 255, 255, 0.7); */
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.7);
+    
+}
+
+
+th {
+    
+    color: #fff;
+    background-color: #498b4b;
+    /* background-color: #2980B9;
+    background-color: rgba(0, 0, 0, 0.5); Semi-transparent black background for better contrast */
+
+}
+.expense-tracker{
+    margin: 0px 0px 60px;
+    text-align: center;
+}
+.my-expense{
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 2.9);
+}
+
+tr:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+a {
+    text-decoration: none;
+    color: #000;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* buttons */
+
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+button {
+    margin: 0px;
+    font-size: 20px;
+    width: calc(100% - 20px);
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    box-shadow: 0 0 9px #dadada;
+    padding: 2px;
+    margin-bottom: 0px;
+    border-radius: 5px;
+    color: #000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+button:hover {
+    outline: none;
+    box-shadow: 0 0 20px #dadada;
+    
+    
+}
+
+button:active {
+    background-color: #ff5722; /* Change color on click */
+}
+.submit{
+    border: 1px solid #ffffff; /*table border */
+    margin: 2px;
+    width: calc(100% - 20px);
+    cursor: pointer;
+    color: #fff;
+    background-color: #4CAF50;
+}
+@keyframes colorfulBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+
+/* footer */
+
+/* Add this CSS to your existing styles */
+/* 
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-left: 40px;
+    border-radius: 100px;
+    width: 200px;
+    height: auto;
+    
+}
+
+.Details {
+    max-width: 550px;
+    text-align: left;
+    
+}
+
+.Details p {
+    font-size:  19px;
+    margin-bottom: 5px;
+}
+ */
+ .expense-tracker {
+    margin: 0px 0px 18px;
+    text-align: center;
+    padding: 42px 25px 11px 25px;
+}
+/* cgst and sgst */
+.form-container {
+    max-width: 600px;
+    /* margin: 0 auto; Center the form container */
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.inline-inputs {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.inline-inputs label {
+    width: 30px; /* Adjust label width as needed */
+}
+
+.inline-inputs input {
+    width: 120px;
+    width: calc(100% - 20px);
+     /* Adjust input width as needed */
+}

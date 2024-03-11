@@ -1,0 +1,41 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/index_login.css">
+    
+    <title>आजरा साखर कारखाना - login</title>
+</head>
+
+<body class="login-body">
+
+    <div class="logo-container">
+        <img src="/img/logo.jpg" alt="Logo">
+    </div>
+
+    <div class="login-container">
+        <h2 class="login-title">Login</h2>
+
+        <form class="login-form" id="loginForm">
+            <div class="login-input-group">
+                <label for="username" class="login-label">Username</label>
+                <input type="text" id="username" name="username" class="login-input" value="admin" required>
+            </div>
+
+            <div class="login-input-group">
+                <label for="password" class="login-label">Password</label>
+                <a href="#" id="forgotPasswordLink" class="forgot-password-link">Forgot Password?</a>
+                <input type="password" id="password" name="password" class="login-input" value="123" required>
+            </div>
+
+            <button type="submit" class="login-button">Log in</button>
+        </form>
+    </div>
+    <script src="/script/index.js"></script>
+    
+</body>
+
+</html>
