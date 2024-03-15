@@ -75,7 +75,7 @@ header {
     left: 0;
     width: 100%;
     height: 95%;
-    background-image: url('/bg-imgs/sugar-cane.jpg');
+    background-image: url('/img/sugar-cane.jpg');
     background-size: 36% 100%; /* Cover height and repeat x */
     border-radius: 43px;
     background-repeat: repeat-x; /* Repeat image horizontally */
@@ -280,7 +280,7 @@ button:active {
     background-color: #ff5722; /* Change color on click */
 }
 .submit{
-    border: 1px solid #ffffff; /*table border */
+    border: 1px solid #ffffff; 
     margin: 2px;
     width: calc(100% - 20px);
     cursor: pointer;
@@ -295,42 +295,7 @@ button:active {
         background-position: 100% 50%;
     }
 }
-
-
-/* footer */
-
-/* Add this CSS to your existing styles */
-/* 
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo {
-    margin-left: 40px;
-    border-radius: 100px;
-    width: 200px;
-    height: auto;
-    
-}
-
-.Details {
-    max-width: 550px;
-    text-align: left;
-    
-}
-
-.Details p {
-    font-size:  19px;
-    margin-bottom: 5px;
-}
- */
- .expense-tracker {
+.expense-tracker {
     margin: 0px 0px 18px;
     text-align: center;
     padding: 42px 25px 11px 25px;

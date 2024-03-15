@@ -1,0 +1,372 @@
+/* header part */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* scroll */
+}
+::-webkit-scrollbar {
+    width: 0.1px;
+}
+
+.header {
+    background: url('/img/banner.jpg') center/cover repeat-x; /* Center the image, cover the container, and repeat horizontally */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.companyName {
+    margin: 10px;
+    font-size: 24px; /* Adjust font size for smaller screens */
+}
+
+.companyAddress {
+    text-align: center;
+    color: #fff;
+    font-size: 16px; /* Adjust font size for smaller screens */
+}
+
+.companyAddress p {
+    margin: 5px 0; /* Reduce the gap between paragraphs */
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .companyName {
+        font-size: 20px; /* Adjust font size for smaller screens */
+    }
+
+    .companyAddress {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+}
+
+
+/* Navbar */
+
+.navbar {
+    display: flex; /* Make the navbar flex container */
+    align-items: center; /* Align items vertically */
+    background-color: #288e2c;
+    overflow: hidden;
+    height: 50px;
+}
+
+.navLink {
+    font-size: 19px;
+    color: white;
+    text-decoration: none;
+    padding: 0px 20px;
+}
+
+.navLink:hover {
+    cursor: pointer;
+    color: rgb(218, 218, 218);
+}
+
+.logout {
+    padding: 15px 20px;
+    background-color: #288e2c;
+    color: white;
+    border: none;
+    font-size: 19px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.logout:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.5s;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.logout:hover:before {
+    animation: glow 1s infinite alternate;
+}
+
+.logout span {
+    position: relative;
+    z-index: 1;
+}
+
+.logout:active {
+    background-color: #ff5722; 
+  }
+  
+@keyframes glow {
+    0% {
+        transform: scale(0.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Responsive Navbar */
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .navLink,
+    .logout {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+
+
+
+/* form */
+main {
+    background-color: #7dca8f;
+    opacity: 0.8;
+    background: linear-gradient(135deg, #a4eda255 25%, transparent 25%) -11px 0/ 22px 22px, linear-gradient(225deg, #a4eda2 25%, transparent 25%) -11px 0/ 22px 22px, linear-gradient(315deg, #a4eda255 25%, transparent 25%) 0px 0/ 22px 22px, linear-gradient(45deg, #a4eda2 25%, #7dca8f 25%) 0px 0/ 22px 22px;
+    background-size: 600% 100%; 
+    animation: colorfulBackground 40s linear infinite; 
+    color: #fff;
+    padding: 20px;
+}
+.mainContent {
+    position: relative; 
+    z-index: 1; 
+    overflow: hidden; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0px 30px
+}
+
+.mainContent::before {
+    content: "";
+    position: absolute;
+    
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background-image: url(/img/sugar-cane.jpg);
+    background-size: 33% 100%;
+    border-radius: 43px;
+    
+    z-index: -1;
+}
+
+
+.mainContent::after {
+    content: "";
+    position: absolute;
+    bottom: -50%; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+}
+
+
+                                                                                                                    
+.formContainer {
+    width: 45%;
+    background-color: rgb(241 255 241);
+    font-size: 20px;
+    color: #000;
+    
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.logoContainer {
+    width: 300px; /* Set width for logo container */
+    display: flex;
+    align-items: center; /* Center the logo vertically */
+    justify-content: center; /* Center the logo horizontally */
+    
+}
+.logo {
+    width: 80%; /* Make the logo fill its container */
+    border-radius: 50%; /* Make the logo circular */
+    display: block;
+}
+.expenseTracker {
+    width: 45%;
+    background-color: rgba(255, 255, 255, 0.992);
+    font-size: 17px;
+    color: #000;
+    padding: 15px; /* Add padding for better spacing */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+}
+/* Adding a local class to make selectors pure */
+.expenseForm input[type="text"],
+.expenseForm input[type="number"],
+.expenseForm input[type="date"],
+.expenseForm button {
+  margin: 0px;
+  font-size: 20px;
+  width: calc(100% - 20px);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  box-shadow: 0 0 9px #dadada;
+  padding: 2px;
+  margin-bottom: 0px;
+  border-radius: 5px;
+  color: #000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Adjusted selectors with the local class */
+.expenseForm input[type="text"]:focus,
+.expenseForm input[type="number"]:focus,
+.expenseForm input[type="date"]:focus,
+.expenseForm button:hover {
+  outline: none;
+  box-shadow: 0 0 20px #dadada;
+}
+
+.expenseForm button:focus {
+  background-color: #ff5722; /* Change color on click */
+}
+.expenseForm button{
+    border: 1px solid #ffffff; 
+    margin: 2px;
+    width: calc(100% - 20px);
+    cursor: pointer;
+    color: #fff;
+    background-color: #4CAF50;
+}
+.expTracker {
+    width: 90%; 
+    border-collapse: separate;
+   
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: auto;
+   
+    border-radius: -24px;
+    text-align: center;
+    
+}
+
+.expTracker table,.expTracker th,.expTracker td {
+    
+    border: 0.1px solid #000;
+    
+}
+
+.expTracker th,.expTracker td {
+    padding: 17px;
+    font-size: 19px;
+    
+    
+}
+.expTracker th {
+    
+    color: #fff;
+    background-color: #498b4b;
+    
+
+}
+.expTracker td{
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.7);
+    
+} 
+
+
+@keyframes colorfulBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+
+
+.formContainer label {
+    display: inline-block;
+    margin-bottom: 0.2rem;
+
+}
+.formContainer input {
+    display: inline-block;
+    margin-bottom: 0.2rem;
+
+}
+.inlineInputs {
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.inlineInputs label {
+    width: 30px; 
+    
+}
+
+.inlineInputs input {
+    width: 120px;
+    width: calc(100% - 20px);
+    
+}
+
+
+/* table */
+.myExpense{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    border: 0.1px solid #00000078;
+    background-color: rgba(255, 255, 255, 0.171);
+    
+
+}
+
+
+.myExpense th {
+    padding: 10px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #488a4b;
+    
+
+}
+.myExpense td {
+    padding: 10px;
+    font-size: 20px;
+    color: #000000;
+    
+    
+
+}
+
+.myExpense tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 2.9);
+}
+
+.myExpense tr:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+
+

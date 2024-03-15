@@ -1,3 +1,5 @@
+let tdData = document.querySelector("history-table");
+console.log("Hiiiiiiiiiifpo",tdData)
 function filterData() {
     var startDate = document.getElementById("startDate").value;
     var endDate = document.getElementById("endDate").value;
@@ -5,6 +7,7 @@ function filterData() {
     // Perform filtering based on start and end dates
     // Example: AJAX request to fetch filtered data
 }
+
 
 function downloadReport() {
     var startDate = document.getElementById("startDate").value;
